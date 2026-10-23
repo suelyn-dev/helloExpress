@@ -10,8 +10,8 @@ http:
     type: json
     data: |-
       {
-        "Name": "BMW",
-        "Hersteller": "Volvo"
+        "name": "BMW",
+        "hersteller": "Volvo"
       }
   auth: inherit
 

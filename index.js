@@ -1,6 +1,9 @@
 import express from "express";
 /* Hier lädst du das Express-Framework in dein Skript. Damit importierst du die Funktionen, die Express bereitstellt, um HTTP-Anfragen zu verarbeiten.*/
 
+import jrpgs from "./data/jrpgs.json" with {type:"json"}
+/* jrpgs importiert */
+
 const PORT = 8080
 const app = express()
 /* Hier wird die Express-Anwendung instanziiert (gestartet) --> über app definieren wir Routen (z. B. was passiert, wenn jemand www.deineseite.de/ueber-uns aufruft).*/
@@ -12,11 +15,11 @@ Jede Anfrage, die an deinen Server geschickt wird, wandert durch eine Kette von 
 app.use(logger) //app.use() schaltet die Middleware für alle Anfragen zwischen, noch bevor diese bei deinen Routen (app.get oder app.post) ankommt. 
 
 app.get("/", (req, res) => {
-    res.json({model: "MAN"})
+    res.json({jrpgs})
 })
 
 app.post("/", (req, res) => {
-    console.log(req.body.hersteller);
+    console.log(req.body.name);
     res.end()
 })
 
