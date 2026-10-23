@@ -688,5 +688,20 @@
     "setting": "Yokohama und Hawaii",
     "multiplayer": false,
     "description": "Ichiban Kasuga und Kazuma Kiryu treffen in Hawaii auf neue Verbündete und eine Verschwörung, die ihre Vergangenheit berührt."
+  },
+  {
+    "id": 1000,
+    "title": "Webdev I",
+    "releaseYear": 2006,
+    "developer": "Ihr",
+    "publisher": "damago",
+    "platforms": [
+      "Alle"
+    ],
+    "subgenre": "Nerd",
+    "combatSystem": "Keystroke based eventdrven explitation",
+    "setting": "Klassenzimmer",
+    "multiplayer": false,
+    "description": "Hirne füllen"
   }
 ]

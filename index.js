@@ -4,6 +4,8 @@ import express from "express";
 import jrpgs from "./data/jrpgs.json" with {type:"json"}
 /* jrpgs importiert */
 
+import {writeFile} from "node:fs/promises"
+
 const PORT = 8080
 const app = express()
 /* Hier wird die Express-Anwendung instanziiert (gestartet) --> über app definieren wir Routen (z. B. was passiert, wenn jemand www.deineseite.de/ueber-uns aufruft).*/
@@ -19,8 +21,11 @@ app.get("/", (req, res) => {
 })
 
 app.post("/", (req, res) => {
-    console.log(req.body.name);
-    res.end()
+    const newGame = req.body
+    jrpgs.push(newGame)
+
+    writeFile("./data/jrpgs.json", JSON.stringify(jrpgs, null, 2))
+    res.json(req.body)
 })
 
 function logger(req, res, next){

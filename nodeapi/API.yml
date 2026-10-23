@@ -10,9 +10,20 @@ http:
     type: json
     data: |-
       {
-        "name": "BMW",
-        "hersteller": "Volvo"
-      }
+            "id": 1000,
+            "title": "Webdev I",
+            "releaseYear": 2006,
+            "developer": "Ihr",
+            "publisher": "damago",
+            "platforms": [
+              "Alle"
+            ],
+            "subgenre": "Nerd",
+            "combatSystem": "Keystroke based eventdrven explitation",
+            "setting": "Klassenzimmer",
+            "multiplayer": false,
+            "description": "Hirne füllen"
+          }
   auth: inherit
 
 settings:
