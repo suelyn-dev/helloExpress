@@ -9,7 +9,7 @@ Der Ordner node_modules wird über die Datei .gitignore vom Git-Repository ausge
 npm install (oder kurz npm i) schaut in die dependenciesstellt alles lokal wieder her.
 
 
-# hello Express
+# hello Express 
 
 ## Semantic Versioning --> wenn wir eine Libary installieren, müssen wir schauen: Versionierung der Abhängigkeiten
 
@@ -38,3 +38,18 @@ Wenn wir etwas installieren, schreibt npm erstmal automatisch ein "^" vor die Ve
 7. git branch -M main
 8. git remote add origin https://github.com/suelyn-dev/helloExpress.git
 9. git push -u origin main
+
+================================================
+
+Damit wir nicht immer Server starten und beenden müssen, installieren wir ein weiteres package nodemon
+
+1. npm install --save-dev nodemon
+
+2. Das muss dann ins Skript eingetragen werden:
+
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon index.js" <-- Das einfügen
+  },
+
+3. npm run dev --> damit wird der Server bei jeder gespeicherten Änderung neu gestartet
