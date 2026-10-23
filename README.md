@@ -30,3 +30,11 @@ Wenn wir etwas installieren, schreibt npm erstmal automatisch ein "^" vor die Ve
 --> ~5.3.0. => nur Patch-Versionen dürfen sich ändern
 --> < oder > 5.3.0. => Versionen jünger oder aläter als 5.3.0 
 --> 5.3.* oder 5.* => Wildcards, eine beliebige Version innerhalb des Zahlenraums
+
+3. .gitignore erstellen, node_modules einfügen
+4. git init -> leeres GIT-repository erstellen
+5. git add .
+6. git commit -m "first commit"
+7. git branch -M main
+8. git remote add origin https://github.com/suelyn-dev/helloExpress.git
+9. git push -u origin main
