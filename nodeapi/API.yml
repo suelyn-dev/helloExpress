@@ -1,10 +1,18 @@
 info:
   name: API
   type: http
+  seq: 1
 
 http:
-  method: GET
+  method: POST
   url: http://127.0.0.1:8080
+  body:
+    type: json
+    data: |-
+      {
+        "Name": "BMW",
+        "Hersteller": "Volvo"
+      }
   auth: inherit
 
 settings:

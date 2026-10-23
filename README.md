@@ -2,6 +2,8 @@
 1. Node Package Manager initialisieren
 npm init -y
 
+--> Damit dieser import-Befehl in Node.js funktioniert, muss im package.json die Zeile "type": in "module" geändert werden, andernfalls nutzt man das ältere const express = require('express'). 
+
 2. npm install express
 package.json (enthält jetzt Versions-Bereiche) wurde erweitert und eine neue Datei package-lock.json (enthält die exakte Versionsnummer, die auf unserem System läuft) wurde erstellt --> beide Dateien gehören ins Repository und die node_modules 
 
